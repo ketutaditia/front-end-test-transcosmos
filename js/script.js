@@ -98,6 +98,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   /* =========================================================
+     Services tabs
+     ========================================================= */
+  var tabButtons = document.querySelectorAll('.tab-btn');
+  var tabPanels = document.querySelectorAll('.tab-panel');
+
+  tabButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      var targetTab = button.getAttribute('data-tab');
+
+      tabButtons.forEach(function (btn) {
+        var isActive = btn === button;
+        btn.classList.toggle('is-active', isActive);
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+
+      tabPanels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute('data-tab-panel') !== targetTab;
+      });
+    });
+  });
+
+  /* =========================================================
      GA4 event tracking via data-event attributes
      ========================================================= */
   function trackEvent(eventName, element) {
