@@ -5,21 +5,24 @@
 :root {
   --color-bg: #000000;
   --color-text: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.7);
+  --color-text-muted: #cccccc;
   --color-border: rgba(255, 255, 255, 0.12);
   --color-surface: #0d0d0d;
   --color-surface-alt: #161616;
 
-  --color-pink: #ff3ea5;
-  --color-orange: #ff8a3d;
-  --color-purple: #7b2ff7;
-  --color-blue: #2f7bff;
+  --color-pink: #ff006e;
+  --color-orange: #ff7400;
+  --color-purple: #7209b7;
+  --color-blue: #0096d6;
+  --color-cyan: #00d9ff;
+  --color-yellow: #ffd500;
 
   --gradient-01: linear-gradient(135deg, var(--color-pink), var(--color-blue));
   --gradient-02: linear-gradient(135deg, var(--color-purple), var(--color-blue));
   --gradient-03: linear-gradient(135deg, var(--color-pink), var(--color-orange));
   --gradient-04: linear-gradient(135deg, var(--color-orange), var(--color-purple));
-  --gradient-hero: linear-gradient(120deg, var(--color-pink) 0%, var(--color-orange) 35%, var(--color-purple) 70%, var(--color-blue) 100%);
+  --gradient-hero: linear-gradient(135deg, var(--color-pink), var(--color-orange), var(--color-purple), var(--color-blue));
+  --gradient-expertise: linear-gradient(135deg, var(--color-blue), var(--color-purple), var(--color-pink), var(--color-orange), var(--color-yellow));
 
   --font-body: "Inter", "Unbounded", sans-serif;
   --font-heading: "Unbounded", "Inter", sans-serif;
@@ -221,7 +224,7 @@ h1, h2, h3, h4 {
   position: relative;
   display: inline-block;
   padding: 0.3rem 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -408,7 +411,7 @@ h1, h2, h3, h4 {
 
 .hero-eyebrow {
   margin: 0 0 1rem;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -428,7 +431,7 @@ h1, h2, h3, h4 {
 .hero-subheading {
   max-width: 540px;
   margin: 0 0 2.5rem;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: var(--color-text-muted);
 }
@@ -499,8 +502,9 @@ h1, h2, h3, h4 {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  min-height: 260px;
-  border-radius: var(--radius-lg);
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  border-radius: var(--radius-sm);
   padding: 2rem;
   overflow: hidden;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -551,7 +555,7 @@ h1, h2, h3, h4 {
   width: 100%;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 2.25rem;
+  padding: 1.75rem;
   background-color: var(--color-surface);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
@@ -639,7 +643,7 @@ h1, h2, h3, h4 {
   width: 100%;
   height: 100%;
   border-radius: var(--radius-lg);
-  background: var(--gradient-02);
+  background: var(--gradient-expertise);
 }
 
 /* =========================================================
@@ -684,7 +688,7 @@ h1, h2, h3, h4 {
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
   background-color: rgba(0, 0, 0, 0.35);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -990,17 +994,28 @@ h1, h2, h3, h4 {
     padding: 2.5rem 0;
   }
 
+  .hero-inner {
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
   .hero-heading {
     font-size: 2.5rem;
   }
 
   .hero-subheading {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1rem;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
   }
 
   .card-grid {
