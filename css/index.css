@@ -384,9 +384,10 @@ h1, h2, h3, h4 {
   width: 100%;
   min-height: 700px;
   padding: 3rem 0;
-  background: radial-gradient(circle at 80% 20%, rgba(255, 62, 165, 0.25), transparent 45%),
-              radial-gradient(circle at 20% 80%, rgba(47, 123, 255, 0.25), transparent 45%),
-              var(--color-bg);
+  background-image: url('../images/bg_hero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
