@@ -24,7 +24,7 @@
   --gradient-04: linear-gradient(135deg, var(--color-orange), var(--color-purple));
   --gradient-hero: linear-gradient(135deg, var(--color-pink), var(--color-orange), var(--color-purple), var(--color-blue));
   --gradient-expertise: linear-gradient(135deg, var(--color-blue), var(--color-purple), var(--color-pink), var(--color-orange), var(--color-yellow));
-  --gradient-heading: linear-gradient(135deg, var(--color-pink), var(--color-purple), var(--color-orange));
+  --gradient-heading: linear-gradient(90deg, #c6f1f7 0%, #f983e9 36%, #b877ff 74%, #c2e9cd 100%);
   --gradient-sphere: radial-gradient(circle at 30% 30%, var(--color-blue), var(--color-purple));
 
   --font-body: "Inter", "Unbounded", sans-serif;
@@ -95,7 +95,7 @@ input {
 
 h1, h2, h3, h4 {
   font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
 }
 
@@ -150,7 +150,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-text-muted);
 }
 
 .gradient-heading {
@@ -158,6 +158,9 @@ h1, h2, h3, h4 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: 0;
   color: transparent;
 }
 
@@ -479,15 +482,19 @@ h1, h2, h3, h4 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.5rem;
-  line-height: 1.05;
+  font-family: var(--font-heading);
+  font-size: 3.375rem;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: 0;
   color: transparent;
 }
 
 .hero-subheading {
   max-width: 420px;
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.6;
   color: var(--color-text-muted);
 }
@@ -519,7 +526,7 @@ h1, h2, h3, h4 {
 
 .hero-right-text {
   max-width: 320px;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   line-height: 1.6;
   color: var(--color-text-muted);
 }
@@ -555,7 +562,7 @@ h1, h2, h3, h4 {
 .digital-dreams-intro p,
 .digital-dreams-body p {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -661,7 +668,7 @@ h1, h2, h3, h4 {
 
 .card-item-text {
   max-width: 360px;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -677,7 +684,7 @@ h1, h2, h3, h4 {
 
 .help-clients-columns p {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -747,13 +754,13 @@ h1, h2, h3, h4 {
 
 .tab-panel-columns p {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
 .help-clients-closing {
   max-width: 900px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -800,7 +807,7 @@ h1, h2, h3, h4 {
 }
 
 .service-box-text {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -849,7 +856,7 @@ h1, h2, h3, h4 {
 .expertise-band-text {
   max-width: 420px;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -874,7 +881,7 @@ h1, h2, h3, h4 {
 
 .expertise-columns p {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -933,7 +940,7 @@ h1, h2, h3, h4 {
 
 .project-card-text {
   max-width: 460px;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -1083,7 +1090,7 @@ h1, h2, h3, h4 {
 }
 
 .product-card-text {
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   color: var(--color-text-muted);
 }
 
@@ -1098,7 +1105,7 @@ h1, h2, h3, h4 {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .bottom-nav-link {
@@ -1199,7 +1206,7 @@ h1, h2, h3, h4 {
   }
 
   .hero-heading {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
 
   .hero-right {
@@ -1285,13 +1292,13 @@ h1, h2, h3, h4 {
   }
 
   .hero-heading {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero-subheading {
     margin-left: auto;
     margin-right: auto;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .hero-right {
@@ -1385,7 +1392,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 400px) {
   .hero-heading {
-    font-size: 2.1rem;
+    font-size: 1.75rem;
   }
 
   .navbar-logo-text {
