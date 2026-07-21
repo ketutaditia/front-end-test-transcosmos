@@ -32,40 +32,46 @@
 
   <!-- ===================== NAVBAR ===================== -->
   <header class="site-header">
-    <nav class="navbar-custom" aria-label="Primary navigation">
-      <div class="navbar-inner">
+    <nav class="navbar-main" aria-label="Primary navigation">
+      <div class="navbar-container">
 
-        <a class="navbar-logo" href="#top" data-event="click_nav_logo">
-          <span class="navbar-logo-text">Influenzailla</span>
-        </a>
+        <div class="navbar-left">
+          <a class="navbar-logo" href="#top" data-event="click_nav_logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2l2 8 8 2-8 2-2 8-2-8-8-2 8-2 2-8z"/>
+            </svg>
+            <span class="navbar-logo-text">Influenzailla</span>
+          </a>
+          <p class="navbar-tagline">Bespoke design and marketing services</p>
+        </div>
 
-        <ul class="navbar-menu" id="navbar-menu">
-          <li><a class="navbar-link" href="#about" data-event="click_nav_about">About</a></li>
-          <li><a class="navbar-link" href="#services" data-event="click_nav_services">Services</a></li>
-          <li><a class="navbar-link" href="#cases" data-event="click_nav_cases">Cases</a></li>
-          <li><a class="navbar-link" href="#team" data-event="click_nav_team">Team</a></li>
-          <li><a class="navbar-link" href="#boost" data-event="click_nav_boost">Boost</a></li>
-          <li><a class="navbar-link" href="#products" data-event="click_nav_products">Products</a></li>
-        </ul>
-
-        <div class="navbar-actions">
-          <form class="navbar-search" role="search" aria-label="Site search">
-            <label class="visually-hidden" for="site-search">Search</label>
-            <input class="navbar-search-input" id="site-search" type="search" placeholder="Search" name="search">
-            <button class="navbar-search-btn" type="submit" aria-label="Submit search">
+        <div class="navbar-menu-grid" id="navbar-menu">
+          <div class="navbar-menu-row">
+            <a class="nav-item" href="#about" data-event="click_nav_about">About</a>
+            <a class="nav-item" href="#services" data-event="click_nav_services">Services</a>
+            <a class="nav-item" href="#cases" data-event="click_nav_cases">Cases</a>
+            <a class="nav-item" href="#team" data-event="click_nav_team">Team</a>
+            <button class="nav-item nav-icon" type="button" aria-label="Change language" data-event="click_nav_language">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
-                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                <ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5"/>
               </svg>
             </button>
-          </form>
-
-          <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-event="mobile_menu_open">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
+          </div>
+          <div class="navbar-menu-row">
+            <a class="nav-item" href="#boost" data-event="click_nav_boost">Boost Program</a>
+            <a class="nav-item" href="#products" data-event="click_nav_products">Products</a>
+            <a class="nav-item" href="#book" data-event="click_nav_book">Book</a>
+            <a class="nav-item" href="#blog" data-event="click_nav_blog">Blog</a>
+          </div>
         </div>
+
+        <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" data-event="mobile_menu_open">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
 
       </div>
     </nav>
@@ -87,8 +93,19 @@
       <li><a class="mobile-menu-link" href="#services" data-event="click_nav_services">Services</a></li>
       <li><a class="mobile-menu-link" href="#cases" data-event="click_nav_cases">Cases</a></li>
       <li><a class="mobile-menu-link" href="#team" data-event="click_nav_team">Team</a></li>
-      <li><a class="mobile-menu-link" href="#boost" data-event="click_nav_boost">Boost</a></li>
+      <li><a class="mobile-menu-link" href="#boost" data-event="click_nav_boost">Boost Program</a></li>
       <li><a class="mobile-menu-link" href="#products" data-event="click_nav_products">Products</a></li>
+      <li><a class="mobile-menu-link" href="#book" data-event="click_nav_book">Book</a></li>
+      <li><a class="mobile-menu-link" href="#blog" data-event="click_nav_blog">Blog</a></li>
+      <li>
+        <button class="mobile-menu-link mobile-menu-link-icon" type="button" aria-label="Change language" data-event="click_nav_language">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+            <ellipse cx="12" cy="12" rx="4" ry="9" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </button>
+      </li>
     </ul>
   </div>
 
@@ -96,24 +113,39 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero-section" id="top">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <p class="hero-eyebrow">Digital &amp; creative agency</p>
-          <h1 class="hero-heading">Influence your audience</h1>
-          <p class="hero-subheading">
-            We craft bold brands, striking design and data-driven marketing campaigns
-            that turn audiences into loyal communities. Influenzailla helps ambitious
-            businesses grow their influence online.
-          </p>
-          <div class="hero-actions">
-            <a class="btn-primary" href="#services" data-event="click_hero_cta">Explore services</a>
-            <a class="btn-secondary" href="#cases" data-event="click_hero_cta">See our work</a>
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span class="badge-year">2023</span>
+            <span class="badge-text">Hi there, let's get started!</span>
           </div>
+
+          <h1 class="hero-heading">Influence your audience</h1>
+
+          <svg class="hero-wavy-line" width="90" height="14" viewBox="0 0 90 14" fill="none" aria-hidden="true">
+            <path d="M2 8c6-8 12 8 18 0s12-8 18 0 12 8 18 0 12-8 18 0 10 6 14 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+
+          <p class="hero-subheading">Boost your brand with our marketing expertise</p>
         </div>
-        <div class="hero-visual" aria-hidden="true">
-          <div class="hero-visual-shape hero-visual-shape-1"></div>
-          <div class="hero-visual-shape hero-visual-shape-2"></div>
-          <div class="hero-visual-shape hero-visual-shape-3"></div>
+
+        <div class="hero-right">
+          <div class="hero-icon" aria-hidden="true">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="5" fill="#ffffff"/>
+              <g stroke="#ffffff" stroke-width="2" stroke-linecap="round">
+                <line x1="12" y1="1" x2="12" y2="4"/>
+                <line x1="12" y1="20" x2="12" y2="23"/>
+                <line x1="1" y1="12" x2="4" y2="12"/>
+                <line x1="20" y1="12" x2="23" y2="12"/>
+                <line x1="4.2" y1="4.2" x2="6.3" y2="6.3"/>
+                <line x1="17.7" y1="17.7" x2="19.8" y2="19.8"/>
+                <line x1="4.2" y1="19.8" x2="6.3" y2="17.7"/>
+                <line x1="17.7" y1="6.3" x2="19.8" y2="4.2"/>
+              </g>
+            </svg>
+          </div>
+          <p class="hero-right-text">We believe in the power of digital media to transform businesses and connect them with their audiences in meaningful ways.</p>
         </div>
       </div>
     </section>
@@ -305,6 +337,16 @@
             <p class="product-card-text">Plan, schedule and analyze social content in one workspace.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== BOTTOM NAVIGATION ===================== -->
+    <section class="bottom-nav-section">
+      <div class="bottom-nav-container">
+        <a class="bottom-nav-link" href="#about-us" data-event="click_nav_about_us">About us</a>
+        <a class="bottom-nav-link" href="#expertise" data-event="click_nav_expertise">Expertise</a>
+        <a class="bottom-nav-link" href="#get-started" data-event="click_nav_get_started">Get started</a>
+        <a class="bottom-nav-link" href="#what-we-do" data-event="click_nav_what_we_do">What we do</a>
       </div>
     </section>
 
