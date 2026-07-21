@@ -234,16 +234,15 @@ h1, h2, h3, h4 {
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  max-width: 1320px;
   min-height: var(--navbar-height);
-  margin: 0 auto;
   padding: 1rem 1.5rem;
 }
 
 .navbar-grid {
   display: flex;
   align-items: stretch;
-  border: 1px solid var(--color-border-strong);
+  justify-content: space-between;
+  flex: 1;
 }
 
 .navbar-logo-cell {
@@ -251,7 +250,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   justify-content: center;
   gap: 0.35rem;
-  border-right: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-border-strong);
   padding: 0.9rem 1.25rem;
   background-color: transparent;
 }
@@ -286,6 +285,7 @@ h1, h2, h3, h4 {
 .navbar-menu {
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--color-border-strong);
 }
 
 .navbar-menu-row {
